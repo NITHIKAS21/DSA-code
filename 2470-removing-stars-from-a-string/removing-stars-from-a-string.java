@@ -10,18 +10,11 @@ class Solution {
                 st.push(s.charAt(i));
             }
         }
-        String ans = "";
-
-        while(!st.isEmpty()){
-            ans = ans + st.pop();
+        StringBuilder sb = new StringBuilder();
+        while(!st.isEmpty()) {
+            sb.append(st.pop());
         }
-
-        String m = "";
-
-        for(int i = ans.length()-1; i >= 0; i--) {
-             m = m + ans.charAt(i);
-        }
-        return m;
+        return sb.reverse().toString();
 
     }
 }
